@@ -1,27 +1,37 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
+  <head>
+    <script
+      crossorigin="anonymous"
+      src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"
+    ></script>
+    <style>
+      html,
+      body {
+         height: 100%;
+      }
 
-<head>
-  <meta charset="utf-8">
-  <title>Diet Bot</title>
-  <link rel="stylesheet" href="styles.css">
-  
-</head>
+      body {
+        margin: 0;
+      }
 
-<body>
-  <div class="top-container">
-    <h1>DIET BOT</h1>
-    <h2>Suggests diet plans, calculates BMI and Ideal Weight</h2>
-    <iframe src='https://webchat.botframework.com/embed/DietBot6?s=M_vWoWl7tdM.D5ULtY7xhYJYEt_w0R1eSyYJyjvODw-Az15HHdV8C3w'  style='min-width: 600px; width: 60%; min-height: 600px;'></iframe>
-  </div>
-  
-  <div class="bottom-container">
-    <a class="footer-link" href="https://github.com/Aksky16/Diet_Bot">Github</a>
-    <p class="credit">By Akaash Dravid.</p>
-  </div>
-
-
-
-</body>
-
+      #webchat {
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="webchat" role="main"></div>
+    <script>
+      window.WebChat.renderWebChat(
+        {
+          directLine: window.WebChat.createDirectLine({
+            token: '2bmrBJioLlM.IYrnZnBwy-mgWFFiMRCaZwtqhv_MwDFeQCuUFLeGWK8'
+          }),
+        },
+        document.getElementById('webchat')
+      );
+    </script>
+  </body>
 </html>
